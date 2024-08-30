@@ -12,7 +12,7 @@ const peerConnectionConfig = {
   ]
 };
 
-const HTTPS_PORT = 10000;
+const HTTPS_PORT = 8443;
 
 async function pageReady() {
   uuid = createUUID();
