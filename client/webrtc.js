@@ -12,13 +12,15 @@ const peerConnectionConfig = {
   ]
 };
 
+const HTTPS_PORT = process.env.PORT || 8443;
+
 async function pageReady() {
   uuid = createUUID();
 
   localVideo = document.getElementById('localVideo');
   remoteVideo = document.getElementById('remoteVideo');
 
-  serverConnection = new WebSocket(`wss://${window.location.hostname}:8443`);
+  serverConnection = new WebSocket(`wss://${window.location.hostname}:${HTTPS_PORT}`);
   serverConnection.onmessage = gotMessageFromServer;
 
   const constraints = {
