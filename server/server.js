@@ -5,14 +5,8 @@ const https = require('https');
 const WebSocket = require('ws');
 const WebSocketServer = WebSocket.Server;
 
-// Yes, TLS is required for WebRTC
-const serverConfig = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem'),
-};
-
 function main() {
-  const httpsServer = startHttpsServer(serverConfig);
+  const httpsServer = startHttpsServer();
   startWebSocketServer(httpsServer);
   printHelp();
 }
