@@ -53,7 +53,7 @@ function startWebSocketServer(httpsServer) {
 }
 
 function printHelp() {
-  console.log(window.location.hostname);
+  // console.log(window.location.hostname);
   console.log(`Server running. Visit https://localhost:${HTTPS_PORT} in Firefox/Chrome/Safari.\n`);
   console.log('Please note the following:');
   console.log('  * Note the HTTPS in the URL; there is no HTTP -> HTTPS redirect.');
